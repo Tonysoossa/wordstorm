@@ -1,9 +1,16 @@
+import Link from "next/link";
 export default function NavBar() {
   return (
     <nav className="flex justify-end gap-14">
-      <a className="cursor-pointer">Rules</a>
-      <a className="cursor-pointer">Home</a>
-      <a className="cursor-pointer">Log in</a>
+      <Link href="/" className="cursor-pointer">
+        Rules
+      </Link>
+      <Link href="/" className="cursor-pointer">
+        Home
+      </Link>
+      <Link href="" className="cursor-pointer">
+        Log in
+      </Link>
     </nav>
   );
 }
