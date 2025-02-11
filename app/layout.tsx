@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased pr-12 pl-12 pt-2`}
       >
         <NavBar />
-        <main className="flex-grow container mx-auto px-4 py-20">
+        <main className="flex-grow text-center container mx-auto px-4 py-20">
           {children}
         </main>
         <Footer />
