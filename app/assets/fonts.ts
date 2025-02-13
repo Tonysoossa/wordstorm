@@ -1,19 +1,22 @@
-import { Geist_Mono } from "next/font/google";
-import { Doto, Silkscreen } from "next/font/google";
+import { Geist_Mono, Doto, Silkscreen } from "next/font/google";
 
 export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-geist-mono",
 });
 
 export const doto = Doto({
-  variable: "--font-doto",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-doto",
 });
 
 export const silkscreen = Silkscreen({
-  variable: "--font-silkscreen",
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
+  variable: "--font-silkscreen",
 });

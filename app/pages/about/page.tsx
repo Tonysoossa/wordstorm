@@ -1,8 +1,10 @@
+import {  silkscreen } from "@/app/assets/fonts";
+
 import Link from "next/link";
 
 export default function About() {
   return (
-    <div>
+    <div className={`${silkscreen.variable}`}>
       <p>this is About Page</p>
       <Link
         href="https://github.com/Tonysoossa/wordstorm"

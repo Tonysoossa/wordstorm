@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { silkscreen } from "../assets/fonts";
 
 export default function NavBar() {
   return (
-    <nav
-      className={`flex items-center justify-between p-4 ${silkscreen.variable}`}
-    >
+    <nav className="flex items-center justify-between p-4 font-silkscreen">
       <div className="flex items-center gap-2">
         <Image
           src="/wordstormLogo.png"
