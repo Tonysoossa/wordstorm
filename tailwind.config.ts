@@ -10,8 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        yellowCustom: "#ffd42f",
       },
       fontFamily: {
         geistMono: "var(--font-geist-mono)",

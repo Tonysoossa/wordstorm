@@ -17,25 +17,25 @@ export default function NavBar() {
       <div className="flex text-lg gap-8 ">
         <Link
           href="/rules"
-          className="cursor-pointer hover:text-blue-400 hover:scale-110"
+          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
         >
           Rules
         </Link>
         <Link
           href="/"
-          className="cursor-pointer hover:text-blue-400 hover:scale-110"
+          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
         >
           Home
         </Link>
         <Link
           href="/about"
-          className="cursor-pointer hover:text-blue-400 hover:scale-110"
+          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
         >
           About
         </Link>
         <Link
           href="/login"
-          className="cursor-pointer hover:text-blue-400 hover:scale-110"
+          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
         >
           Log in
         </Link>

@@ -1,7 +1,7 @@
 export default function Rules() {
   return (
     <div>
-      <p>THis is the rules page</p>
+      <p>This is the rules page</p>
     </div>
   );
 }
