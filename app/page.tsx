@@ -1,5 +1,10 @@
-import { redirect } from "next/navigation";
+import { geistMono } from "@/app/assets/fonts";
+
 
 export default function Home() {
-  redirect("/pages/landing");
+  return (
+    <div className={`${geistMono.variable}`}>
+      <p>This is the Landing page</p>
+    </div>
+  );
 }

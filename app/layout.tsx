@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${doto.variable} ${silkscreen.variable} ${geistMono.variable}`}>
-      <body className={` ${geistMono.variable} antialiased pr-12 pl-12 pt-2`}>
+      <body className="antialiased pr-12 pl-12 pt-2 font-geistMono">
         <NavBar />
         <main className="flex-grow text-center container mx-auto px-4 py-20">
           {children}
