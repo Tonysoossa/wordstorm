@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import AboutAnimatedModal from "@/app/components/modals/AboutModal";
+// import AboutAnimatedModal from "@/app/components/modals/AboutModal";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 fixed top-0 left-0 right-0 bg-black z-50">
+    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 fixed top-0 left-0 right-0 bg-black ">
       <div className="flex items-center gap-2">
         <Image
           src="/wordstormLogo.png"
