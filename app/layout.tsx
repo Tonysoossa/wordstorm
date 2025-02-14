@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="font-geistMono flex text-center mx-auto flex-grow max-w-[1440px]">
         <BackgroundBeamsWithCollision>
           <NavBar />
-          <main className="px-4 py-20">{children}</main>
+          <main className="px-4 py-40 flex justify-center">{children}</main>
         </BackgroundBeamsWithCollision>
         <Footer />
       </body>
