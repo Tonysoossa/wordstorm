@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AboutAnimatedModal from "@/app/components/modals/AboutModal";
 
 export default function NavBar() {
   return (
@@ -27,12 +28,9 @@ export default function NavBar() {
         >
           Home
         </Link>
-        <Link
-          href="/about"
-          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
-        >
-          About
-        </Link>
+      <button className="cursor-pointer hover:text-yellowCustom hover:scale-110">
+        About
+      </button>
         <Link
           href="/login"
           className="cursor-pointer hover:text-yellowCustom hover:scale-110"
