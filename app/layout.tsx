@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { geistMono, doto, silkscreen } from "./assets/fonts";
+import { geistMono, silkscreen } from "./assets/fonts";
 import { BackgroundBeamsWithCollision } from "@/app/components/ui/background-beams-with-collision";
 import Footer from "@/app/containers/Footer";
 import NavBar from "@/app/containers/Nav";
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${doto.variable} ${silkscreen.variable} ${geistMono.variable} `}
+      className={` ${silkscreen.variable} ${geistMono.variable}`}
     >
       <body className="font-geistMono flex text-center mx-auto flex-grow max-w-[1440px]">
         <BackgroundBeamsWithCollision>

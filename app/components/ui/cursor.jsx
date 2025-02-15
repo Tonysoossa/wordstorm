@@ -2,6 +2,11 @@
 import { useEffect } from "react";
 import { silkscreen } from "@/app/assets/fonts";
 
+const getRandomCharacter = () => {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  return alphabet[Math.floor(Math.random() * alphabet.length)];
+};
+
 export default function CharacterCursor() {
   useEffect(() => {
     import("cursor-effects")
@@ -9,9 +14,9 @@ export default function CharacterCursor() {
         if (module?.characterCursor) {
           new module.characterCursor({
             element: document.body,
-            characters: ["h", "e", "l", "o", "a", "q", "r", "f", "u", "b"],
-            font: `12px ${silkscreen.style.fontFamily}`,
-           
+            characters: Array.from({ length: 10 }, getRandomCharacter),
+            font: `11px ${silkscreen.style.fontFamily}`,
+
             colors: ["#ffde44", "#af2946", "#fff", "#e76742", "#908279"],
             characterLifeSpanFunction: () =>
               Math.floor(Math.random() * 40 + 50),

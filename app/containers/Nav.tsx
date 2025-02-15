@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-// import AboutAnimatedModal from "@/app/components/modals/AboutModal";
+import AboutModal from "@/app/components/modals/AboutModal";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 fixed top-0 left-0 right-0 bg-black ">
+    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 fixed top-0 left-0 right-0 bg-black max-md:flex-col max-md:pl-6 max-md:pr-6">
       <div className="flex items-center gap-2">
         <Image
           src="/wordstormLogo.png"
@@ -15,7 +15,7 @@ export default function NavBar() {
         <p className="text-2xl font-bold cursor-default">Wordstorm</p>
       </div>
 
-      <div className="flex text-lg gap-8 ">
+      <div className="flex text-lg gap-8 max-md:text-md">
         <Link
           href="/rules"
           className="cursor-pointer hover:text-yellowCustom hover:scale-110"
@@ -28,9 +28,7 @@ export default function NavBar() {
         >
           Home
         </Link>
-      <button className="cursor-pointer hover:text-yellowCustom hover:scale-110">
-        About
-      </button>
+        <AboutModal> About </AboutModal>
         <Link
           href="/login"
           className="cursor-pointer hover:text-yellowCustom hover:scale-110"
