@@ -16,8 +16,7 @@ export default function CharacterCursor() {
             element: document.body,
             characters: Array.from({ length: 10 }, getRandomCharacter),
             font: `11px ${silkscreen.style.fontFamily}`,
-
-            colors: ["#ffde44", "#af2946", "#fff", "#e76742", "#908279"],
+            colors: ["#ffde44", "#af2946", "#fff", "#af2946"],
             characterLifeSpanFunction: () =>
               Math.floor(Math.random() * 40 + 50),
             initialCharacterVelocityFunction: () => ({

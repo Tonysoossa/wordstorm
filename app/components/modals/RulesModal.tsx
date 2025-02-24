@@ -2,9 +2,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../assets/languages/LanguagesContext";
-import Link from "next/link";
 
-export default function AboutModal({
+export default function RulesModal({
   children,
 }: {
   children: React.ReactNode;
@@ -43,30 +42,15 @@ export default function AboutModal({
               >
                 X
               </button>
-
-              <h2 className="text-2xl text-gray-900 mb-4">
-                {translations.aboutModal.title}
+              <h2 className="text-2xl text-gray-900 mb-2 -mt-4">
+                {translations.rulesModal.title}
               </h2>
-              <p className="text-gray-800 text-base font-geistMono">
-                {translations.aboutModal.text}
-              </p>
-              <div className="flex justify-around font-geistMono">
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  href="https://portfolio-servanin-tony.vercel.app/"
-                  target="_blank"
-                  className="mt-6 px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700 hover:scale-105"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  href="https://github.com/Tonysoossa/wordstorm"
-                  target="_blank"
-                  className="mt-6 px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-gray-700 hover:scale-105"
-                >
-                  Repo Github
-                </Link>
+              <div className="gap-2 flex flex-col text-gray-800 text-sm font-geistMono">
+                <p>{translations.rulesModal.base}</p>
+                <p>{translations.rulesModal.soloTitle}</p>
+                <p>{translations.rulesModal.soloText}</p>
+                <p>{translations.rulesModal.multiTitle}</p>
+                <p>{translations.rulesModal.multiText}</p>
               </div>
             </motion.div>
           </motion.div>
