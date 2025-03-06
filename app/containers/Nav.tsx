@@ -6,10 +6,11 @@ import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
 
+
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
   return (
-    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 z-50 fixed top-0 left-0 right-0 bg-black max-lg:flex-col max-md:pl-6 max-md:pr-6">
+    <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 z-50 fixed top-0 left-0 right-0 bg-black max-lg:flex-col max-md:pl-6 max-md:pr-6 max-w-[1440px] mx-auto">
       <div className="flex items-center gap-2">
         <Image
           src="/wordstormLogo.png"
