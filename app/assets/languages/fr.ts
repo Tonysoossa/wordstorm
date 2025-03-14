@@ -3,7 +3,6 @@ const fr = {
   navBar: {
     languageBTN: "FR",
     rules: "Regles",
-    home: "Acceuil",
     about: "A propos",
     log: "Connection",
   },

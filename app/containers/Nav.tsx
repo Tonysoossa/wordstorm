@@ -6,7 +6,6 @@ import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
 
-
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
   return (
@@ -36,13 +35,6 @@ export default function NavBar() {
 
       <div className="flex text-lg gap-8 max-md:text-md">
         <RulesModal>{translations.navBar.rules}</RulesModal>
-
-        <Link
-          href="/"
-          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
-        >
-          {translations.navBar.home}
-        </Link>
         <AboutModal> {translations.navBar.about} </AboutModal>
         <Link
           href="/login"

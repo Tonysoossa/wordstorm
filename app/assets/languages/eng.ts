@@ -3,7 +3,6 @@ const eng = {
   navBar: {
     languageBTN: "Eng",
     rules: "Rules",
-    home: "Home",
     about: "About",
     log: "Log in",
   },
