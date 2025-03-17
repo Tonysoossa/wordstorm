@@ -2,6 +2,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../assets/languages/LanguagesContext";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedOut,
+  SignOutButton,
+  SignedIn,
+} from "@clerk/nextjs";
+import userCoo from "@/clerck/userCoo";
 
 export default function RulesModal({
   children,
@@ -11,6 +19,8 @@ export default function RulesModal({
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const { translations } = useLanguage();
+
+  const [isLog] = useState(true);
 
   return (
     <>
@@ -42,7 +52,27 @@ export default function RulesModal({
               >
                 X
               </button>
-             
+              <div className="text-black flex gap-4">
+                <div
+                  className="border-2
+                p-1 border-black"
+                >
+                  <SignedOut>
+                    <SignInButton mode="modal" />
+                  </SignedOut>
+                </div>
+                <div
+                  className="border-2
+                p-1 border-black"
+                >
+                  <SignedOut>
+                    <SignUpButton mode="modal" />
+                  </SignedOut>
+                  <SignedIn>
+                    <SignOutButton />
+                  </SignedIn>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
@@ -50,3 +80,11 @@ export default function RulesModal({
     </>
   );
 }
+
+// NOTE ADD these for signup form :  <SignedOut>
+// <SignInButton />
+// <SignUpButton />
+// </SignedOut>
+// <SignedIn>
+/* <UserButton /> */
+/* </SignedIn>  */
