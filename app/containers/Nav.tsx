@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
+import LoginModal from "../components/modals/LoginModal";
 
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
@@ -36,12 +36,8 @@ export default function NavBar() {
       <div className="flex text-lg gap-8 max-md:text-md">
         <RulesModal>{translations.navBar.rules}</RulesModal>
         <AboutModal> {translations.navBar.about} </AboutModal>
-        <Link
-          href="/login"
-          className="cursor-pointer hover:text-yellowCustom hover:scale-110"
-        >
-          {translations.navBar.log}
-        </Link>
+        <LoginModal>{translations.navBar.log}</LoginModal>
+        <p></p>
       </div>
     </nav>
   );
