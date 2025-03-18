@@ -24,7 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html
         lang="fr"
-        className={` ${silkscreen.variable} ${geistMono.variable}`}
+        className={`${silkscreen.variable} ${geistMono.variable}`}
       >
         <LanguageProvider>
           <head></head>

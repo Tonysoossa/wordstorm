@@ -3,7 +3,7 @@
 export default function error() {
   return (
     <div className="">
-      <p>This is the Landing page</p>
+      <p>An error Occulted</p>
     </div>
   );
 }
