@@ -4,7 +4,8 @@ const fr = {
     languageBTN: "FR",
     rules: "Regles",
     about: "A propos",
-    log: "Connection",
+    log: "Connexion",
+    deco: "Déconnexion ",
   },
   rulesModal: {
     title: `Règles :`,
@@ -17,6 +18,9 @@ const fr = {
   aboutModal: {
     title: " Bienvenue sur WORDSTOM !",
     text: `Wordstorm est un jeu interactif conçu pour enrichir votre vocabulaire tout en vous amusant. C'est également un projet personnel et indépendant, créé dans le but de pratiquer mes connaissances et d'apprendre en m'amusant ! Si vous souhaitez visiter mon portfolio et/ou le repo de Wordstorm, c'est par ici !`,
+  },
+  index: {
+    helloUser: "Enfin de retour,",
   },
 };
 

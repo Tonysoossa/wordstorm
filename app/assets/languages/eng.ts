@@ -5,6 +5,7 @@ const eng = {
     rules: "Rules",
     about: "About",
     log: "Log in",
+    deco: 'Sign out',
   },
   rulesModal: {
     title: `Rules :`,
@@ -15,9 +16,12 @@ const eng = {
     multiText: `Compete against other players, and when time runs out, the player with the highest score wins! 🚀`,
   },
   aboutModal: {
-    title: " Welcome to WORDSTOM !",
+    title: " Welcome to WORDSTORM !",
     text: `Wordstorm is an interactive game designed to enrich your vocabulary while having fun. It is also a personal and independent project, created with the goal of practicing my knowledge and learning while enjoying myself! If you want to visit my portfolio and/or the Wordstorm repository, here you go!`,
   },
+  index: {
+    helloUser: 'Finally back,'
+  }
 };
 
 export default eng;
