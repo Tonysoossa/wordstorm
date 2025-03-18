@@ -1,10 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
 import LoginModal from "../components/modals/LoginModal";
+import CheckAuthNav from "@/clerk/CheckAuthNav";
 
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
@@ -35,9 +35,10 @@ export default function NavBar() {
 
       <div className="flex text-lg gap-8 max-md:text-md">
         <RulesModal>{translations.navBar.rules}</RulesModal>
-        <AboutModal> {translations.navBar.about} </AboutModal>
-        <LoginModal>{translations.navBar.log}</LoginModal>
-        <p></p>
+        <AboutModal> {translations.navBar.about}</AboutModal>
+        <LoginModal>
+          <CheckAuthNav />
+        </LoginModal>
       </div>
     </nav>
   );
