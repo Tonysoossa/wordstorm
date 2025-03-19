@@ -46,7 +46,9 @@ export default function RulesModal({
                   className="border-2
                 p-1 border-black"
                 >
-                  <SignInButton mode="modal" />
+                  <SignInButton mode="modal">
+                    <button onClick={closeModal}>Sign</button>
+                  </SignInButton>
                 </div>
                 <div
                   className="border-2
