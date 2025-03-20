@@ -1,5 +1,5 @@
 "use client";
-import { useUser, SignInButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { useLanguage } from "@/app/assets/languages/LanguagesContext";
 import MainBtn from "../components/buttons/MainBtn";
 
@@ -21,6 +21,7 @@ export default function Main() {
       {isSignedIn && (
         <div>
           {translations.index.helloUser} {user.username} !
+          <MainBtn />
         </div>
       )}
     </section>
