@@ -12,13 +12,13 @@ export default function CharacterCursor() {
     import("cursor-effects")
       .then((module) => {
         if (module?.characterCursor) {
+        
           new module.characterCursor({
             element: document.body,
             characters: Array.from({ length: 10 }, getRandomCharacter),
             font: `11px ${silkscreen.style.fontFamily}`,
             colors: ["#ffde44", "#af2946", "#fff", "#af2946"],
-            characterLifeSpanFunction: () =>
-              Math.floor(Math.random() * 40 + 50),
+            characterLifeSpanFunction: () => Math.floor(Math.random() * 40 + 50),
             initialCharacterVelocityFunction: () => ({
               x: (Math.random() < 0.5 ? -1 : 1) * Math.random() * 2.5,
               y: (Math.random() < 0.5 ? -1 : 1) * Math.random() * 2.5,
@@ -32,6 +32,14 @@ export default function CharacterCursor() {
             characterNewRotationDegreesFunction: (age, lifeSpan) =>
               (lifeSpan - age) / 5,
           });
+          setTimeout(() => {
+            const cursorElement = document.querySelector(".character-cursor");
+            if (cursorElement) {
+              cursorElement.style.zIndex = "1"; 
+              cursorElement.style.position = "absolute"; 
+              cursorElement.style.pointerEvents = "none";
+            }
+          }, 0);
         } else {
           console.error("characterCursor is not available");
         }
