@@ -4,7 +4,7 @@ import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
 import LoginModal from "../components/modals/LoginModal";
-import CheckAuthNav from "@/clerk/CheckAuthNav";
+import CheckAuthNav from "@/app/components/auth/CheckAuthNav";
 
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
