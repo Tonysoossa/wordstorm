@@ -19,7 +19,7 @@ export default function Main() {
         </div>
       )}
       {isSignedIn && (
-        <div>
+        <div className="flex-col flex justify-center gap-y-12">
           {translations.index.helloUser} {user.username} !
           <MainBtn />
         </div>
