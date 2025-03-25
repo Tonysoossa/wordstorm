@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
-import LoginModal from "../components/modals/LoginModal";
 import CheckAuthNav from "@/app/components/auth/CheckAuthNav";
 
 export default function NavBar() {
@@ -32,13 +31,10 @@ export default function NavBar() {
           />
         </button>
       </div>
-
       <div className="flex text-lg gap-8 max-md:text-md">
         <RulesModal>{translations.navBar.rules}</RulesModal>
         <AboutModal> {translations.navBar.about}</AboutModal>
-        <LoginModal>
-          <CheckAuthNav />
-        </LoginModal>
+        <CheckAuthNav />
       </div>
     </nav>
   );

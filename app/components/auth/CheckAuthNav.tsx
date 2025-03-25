@@ -1,13 +1,21 @@
-import { useUser, SignedIn, SignOutButton } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignOutButton,
+  SignInButton,
+} from "@clerk/nextjs";
 import { useLanguage } from "@/app/assets/languages/LanguagesContext";
 
 export default function CheckAuthNav() {
-  const { isSignedIn } = useUser();
   const { translations } = useLanguage();
 
   return (
     <div>
-      {!isSignedIn && <div>{translations.navBar.log}</div>}
+      <SignedOut>
+        <div>
+          <SignInButton mode="modal">{translations.navBar.log}</SignInButton>
+        </div>
+      </SignedOut>
       <SignedIn>
         <SignOutButton>{translations.navBar.deco}</SignOutButton>
       </SignedIn>
