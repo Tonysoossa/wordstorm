@@ -7,6 +7,9 @@ export default function Main() {
   const { isSignedIn, user } = useUser();
   const { translations } = useLanguage();
 
+  const isNewUser: boolean =
+    Date.now() - new Date(user?.createdAt ?? 0).getTime() < 30000;
+
   return (
     <section>
       {!isSignedIn && (
@@ -23,6 +26,12 @@ export default function Main() {
           {translations.index.helloUser} {user.username} !
           <MainBtn />
         </div>
+      )}
+      {isNewUser && isSignedIn && (
+        <p>
+          Bienvenue sur la plateforme ! Je suis ravi de t’accueillir{" "}
+          {user.username}
+        </p>
       )}
     </section>
   );
