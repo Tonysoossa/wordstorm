@@ -2,6 +2,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useLanguage } from "@/app/assets/languages/LanguagesContext";
 import MainBtn from "../components/buttons/MainBtn";
+import capitalize from "../assets/function/firstLetterUpperCase";
 
 export default function Main() {
   const { isSignedIn, user } = useUser();
@@ -21,18 +22,19 @@ export default function Main() {
           <MainBtn />
         </div>
       )}
-      {isSignedIn && (
+      {isSignedIn && !isNewUser && (
         <div className="flex-col flex justify-center gap-y-12">
-          {translations.index.helloUser} {user.username} !
+          {translations.index.helloUser} {user?.username ? capitalize(user.username) : ''} !
           <MainBtn />
         </div>
       )}
-        {isNewUser && user && (
-          <p>
-            Bienvenue sur la plateforme ! Je suis ravi de t’accueillir
-            {user.username}
-          </p>
-        )}
+      {isNewUser && user && (
+        <div className="flex-col flex justify-center gap-y-12">
+          Bienvenue sur la plateforme ! Je suis ravi de t’accueillir{" "}
+          {user?.username ? capitalize(user.username) : ''}
+          <MainBtn />
+        </div>
+      )}
     </section>
   );
 }
