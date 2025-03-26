@@ -4,8 +4,11 @@ import { useLanguage } from "../assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
 import RulesModal from "../components/modals/RulesModal";
 import CheckAuthNav from "@/app/components/auth/CheckAuthNav";
+import DeleteUserButton from "@/app/components/buttons/UserAccount";
+import { useUser } from "@clerk/nextjs";
 
 export default function NavBar() {
+  const { isSignedIn } = useUser();
   const { translations, toggleLanguage } = useLanguage();
   return (
     <nav className="flex items-center justify-between pt-4 pl-10 pr-10 font-silkscreen h-24 z-50 fixed top-0 left-0 right-0 bg-black max-lg:flex-col max-md:pl-6 max-md:pr-6 max-w-[1440px] mx-auto">
@@ -34,7 +37,8 @@ export default function NavBar() {
       <div className="flex text-lg gap-8 max-md:text-md">
         <RulesModal>{translations.navBar.rules}</RulesModal>
         <AboutModal> {translations.navBar.about}</AboutModal>
-        <CheckAuthNav />
+          <CheckAuthNav />
+          {isSignedIn && <DeleteUserButton />}
       </div>
     </nav>
   );
