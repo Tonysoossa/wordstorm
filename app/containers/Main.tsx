@@ -27,12 +27,12 @@ export default function Main() {
           <MainBtn />
         </div>
       )}
-      {isNewUser && isSignedIn && (
-        <p>
-          Bienvenue sur la plateforme ! Je suis ravi de t’accueillir{" "}
-          {user.username}
-        </p>
-      )}
+        {isNewUser && user && (
+          <p>
+            Bienvenue sur la plateforme ! Je suis ravi de t’accueillir
+            {user.username}
+          </p>
+        )}
     </section>
   );
 }
