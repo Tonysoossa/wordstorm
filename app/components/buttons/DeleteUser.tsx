@@ -1,50 +1,26 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { handleServerDelete } from "@/app/api/deleteUser/route";
 
 const DeleteUserButton = () => {
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [message, setMessage] = useState<string | null>(null)
-
-  const deleteUser = async () => {
-    setLoading(true)
-    setError(null) 
-
+  const handleClick = async () => {
     try {
-      const response = await fetch('/api/deleteUser', {
-        method: 'DELETE',
-      })
-
-      if (response.ok) {
-        const data = await response.json()
-        setMessage(data.message) 
-      } else {
-        const data = await response.json()
-        setError(data.error) 
-      }
-    } catch (err) {
-      console.error('Error deleting user:', err)
-      setError('An error occurred while deleting the user.')
-    } finally {
-      setLoading(false)
+      const result = await handleServerDelete();
+      console.log("Server action result:", result);
+    } catch (error) {
+      console.error("Error executing server action:", error);
     }
-  }
-
+  };
   return (
     <div>
       <button
-        onClick={deleteUser}
-        disabled={loading}
+        onClick={handleClick}
         className="bg-red-500 shadow-[3px_3px_5px_0.5px_#fff6af] rounded-3xl cursor-pointer text-black font-silkscreen text-lg w-28  hover:scale-110 hover:shadow-[-3px_3px_5px_0.5px_#fff6af]"
       >
         Delete
       </button>
-
-      {message && <div className="text-green-500">{message}</div>}
-      {error && <div className="text-red-500">{error}</div>}
     </div>
-  )
-}
+  );
+};
 
-export default DeleteUserButton
+export default DeleteUserButton;
