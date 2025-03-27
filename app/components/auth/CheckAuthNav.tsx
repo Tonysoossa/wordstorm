@@ -12,7 +12,7 @@ export default function CheckAuthNav() {
   return (
     <div>
       <SignedOut>
-        <div>
+        <div className="cursor-pointer hover:text-yellowCustom hover:scale-110">
           <SignInButton mode="modal">{translations.navBar.log}</SignInButton>
         </div>
       </SignedOut>
