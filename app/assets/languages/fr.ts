@@ -1,5 +1,4 @@
 const fr = {
-  // NOTE NAVBAR
   navBar: {
     languageBTN: "FR",
     rules: "Regles",
@@ -19,7 +18,31 @@ const fr = {
     title: " Bienvenue sur WORDSTOM !",
     text: `Wordstorm est un jeu interactif conçu pour enrichir votre vocabulaire tout en vous amusant. C'est également un projet personnel et indépendant, créé dans le but de pratiquer mes connaissances et d'apprendre en m'amusant ! Si vous souhaitez visiter mon portfolio et/ou le repo de Wordstorm, c'est par ici !`,
   },
-  index: {
+  account: {
+    accountModal: {
+      accountNavBtn: "Compte",
+      title: "Mon compte :",
+      preInfo: "Voici toute tes informations ici :",
+      buttons: {
+        keep: "Je le garde !",
+        delete: "Je supprime !",
+      },
+      usernameInfo: "Mon surnom:",
+      mailInfo: "Mon mail:",
+      lastScore: "Mon dernier score:",
+      highestScore: "Mon meilleur score:",
+      deleteTitle: "Supprimer ce compte",
+      deleteConfirmation: "Es-tu sûr de vouloir supprimer ce compte ?",
+    },
+  },
+  buttons: {
+    userBtn: "",
+  },
+  indexNotCoo: {
+    helloUser: "Enfin de retour,",
+    logBtn: "Connexion",
+  },
+  indexCoo: {
     helloUser: "Enfin de retour,",
   },
 };
