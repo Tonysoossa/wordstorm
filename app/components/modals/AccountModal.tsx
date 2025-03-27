@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useUser } from "@clerk/nextjs";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../assets/languages/LanguagesContext";
 import { handleServerDelete } from "@/app/api/deleteUser/route";
@@ -12,6 +13,7 @@ export default function AccountModal({
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const { translations } = useLanguage();
+  const { user } = useUser();
 
   const handleClick = async () => {
     try {
@@ -32,7 +34,7 @@ export default function AccountModal({
         {children}
       </button>
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && user && (
           <motion.div
             className="fixed inset-0 flex items-center justify-center bg-black/70 z-60 max-lg:pr-5 max-lg:pl-5"
             initial={{ opacity: 0 }}
@@ -54,25 +56,44 @@ export default function AccountModal({
                 X
               </button>
               <div className="text-black">
-                <h2 className="text-md pb-4">Tu pars déjà ?</h2>
-                <div className="font-geistMono">
-                  <p className="text-sm">
-                    Est tu sûr de vouloir supprimé ton compte Wordstorm ?
-                  </p>
-                  <p>{translations.rulesModal.multiText}</p>
+                <h2 className="text-md pb-4">
+                  {translations.account.accountModal.title}
+                </h2>
+                <div className="font-geistMono text-sm">
+                  <h3 className="text-md text-bold pb-2">
+                    {translations.account.accountModal.preInfo}
+                  </h3>
+                  <div className="flex flex-col text-start pl-1 gap-1">
+                    <p>
+                      {translations.account.accountModal.usernameInfo}{" "}
+                      {user.username}
+                    </p>
+                    <p>
+                      {translations.account.accountModal.mailInfo}{" "}
+                      {user.emailAddresses[0].emailAddress}
+                    </p>
+                    <p>{translations.account.accountModal.lastScore}</p>
+                    <p>{translations.account.accountModal.highestScore}</p>
+                  </div>
                 </div>
+                <h2 className="pt-4 pb-2">
+                  {translations.account.accountModal.deleteTitle}
+                </h2>
+                <p className="text-sm font-geistMono text-normal">
+                  {translations.account.accountModal.deleteConfirmation}
+                </p>
                 <div className="flex flex-row gap-4 py-4 pt-8 max-md:flex-col ">
                   <button
                     onClick={closeModal}
-                    className="bg-gradient-to-b hover:from-[#51e910] hover:to-[#bed89f] bg-white from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-md px-3 hover:scale-110 h-8 duration-300 transform hover:translate-y-1 max-md:w-52 self-center"
+                    className="bg-gradient-to-b hover:from-[#51e910] hover:to-[#bed89f] bg-white from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-md px-3 hover:scale-110 duration-300 transform hover:translate-y-1 max-md:w-52 self-center h-8"
                   >
-                    I&apos;m keeping it
+                    {translations.account.accountModal.buttons.keep}
                   </button>
                   <button
                     onClick={handleClick}
-                    className="bg-gradient-to-b hover:from-[#e91010] hover:to-[#d87c0a] bg-white from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-md px-3 hover:scale-110 h-8 duration-300 transform hover:translate-y-1 max-md:w-52 self-center"
+                    className="bg-gradient-to-b hover:from-[#e91010] hover:to-[#d87c0a] bg-white from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-md px-3 hover:scale-110 duration-300 transform hover:translate-y-1 max-md:w-52 self-center h-8"
                   >
-                    Yes, delete !
+                    {translations.account.accountModal.buttons.delete}
                   </button>
                 </div>
               </div>
