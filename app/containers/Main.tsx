@@ -24,7 +24,7 @@ export default function Main() {
       )}
       {isSignedIn && !isNewUser && (
         <div className="flex-col flex justify-center gap-y-12">
-          {translations.index.helloUser} {user?.username ? capitalize(user.username) : ''} !
+          {translations.indexCoo.helloUser} {user?.username ? capitalize(user.username) : ''} !
           <MainBtn />
         </div>
       )}
