@@ -1,6 +1,8 @@
 import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
-export default function MainBtn() {
+import { useLanguage } from "@/app/assets/languages/LanguagesContext";
 
+export default function MainBtn() {
+  const { translations } = useLanguage();
   return (
     <div>
       <SignedOut>
@@ -9,8 +11,8 @@ export default function MainBtn() {
             Play !
           </button>
           <SignInButton mode="modal">
-            <button className="shadow-[3px_3px_5px_0.5px_#fff6af] bg-gradient-to-b from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-lg w-28  hover:scale-110 hover:shadow-[-3px_3px_5px_0.5px_#fff6af] h-10">
-              Log
+            <button className="shadow-[3px_3px_5px_0.5px_#fff6af] bg-gradient-to-b from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-lg min-w28 px-4 hover:scale-110 hover:shadow-[-3px_3px_5px_0.5px_#fff6af] h-10">
+            {translations.indexNotCoo.logBtn}
             </button>
           </SignInButton>
         </div>
