@@ -9,29 +9,27 @@ export default function Main() {
   const { translations } = useLanguage();
 
   const isNewUser: boolean =
-    Date.now() - new Date(user?.createdAt ?? 0).getTime() < 30000;
+    Date.now() - new Date(user?.createdAt ?? 0).getTime() < 100000;
 
   return (
     <section>
       {!isSignedIn && (
-        <div>
-          <p>
-            Please register to your account or sign up if you&apos;re a new user
-            ! Or play as a guest but scores couldn&apos;t be saved. Have fun !
-          </p>
+        <div className="flex flex-col pt-20 text-lg">
+          <p>{translations.indexCoo.textPreBtn}</p>
           <MainBtn />
         </div>
       )}
       {isSignedIn && !isNewUser && (
         <div className="flex-col flex justify-center gap-y-12">
-          {translations.indexCoo.helloUser} {user?.username ? capitalize(user.username) : ''} !
+          {translations.indexCoo.helloUser}{" "}
+          {user?.username ? capitalize(user.username) : ""} !
           <MainBtn />
         </div>
       )}
       {isNewUser && user && (
         <div className="flex-col flex justify-center gap-y-12">
-          Bienvenue sur la plateforme ! Je suis ravi de t’accueillir{" "}
-          {user?.username ? capitalize(user.username) : ''}
+          {translations.indexCoo.textPreBtnNewUser}{" "}
+          {user?.username ? capitalize(user.username) : ""}
           <MainBtn />
         </div>
       )}
