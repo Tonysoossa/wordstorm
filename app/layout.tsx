@@ -28,13 +28,13 @@ export default function RootLayout({
       >
         <LanguageProvider>
           <head></head>
-          <body className="font-geistMono flex text-center mx-auto flex-grow max-w-[1440px]">
+          <body className="font-geistMono flex text-center mx-auto flex-grow">
             <BackgroundBeamsWithCollision>
               <NavBar />
               <main className="px-4 py-40 flex justify-center">{children}</main>
             </BackgroundBeamsWithCollision>
             <Footer />
-            <CharacterCursor />
+              <CharacterCursor />
           </body>
         </LanguageProvider>
       </html>
