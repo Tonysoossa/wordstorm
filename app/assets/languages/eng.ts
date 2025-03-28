@@ -1,5 +1,4 @@
 const eng = {
-  // NOTE NAVBAR
   navBar: {
     languageBTN: "Eng",
     rules: "Rules",
@@ -45,6 +44,8 @@ const eng = {
   },
   indexCoo: {
     helloUser: "Enfin de retour,",
+    textPreBtn: `Please register to your account or sign up if you're a new user ! Or play as a guest but scores couldn't be saved.Have fun !`,
+    textPreBtnNewUser: `Welcome to the platform! I'm delighted to welcome you.`,
   },
 };
 
