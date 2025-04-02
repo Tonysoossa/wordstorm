@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import { geistMono, silkscreen } from "./assets/fonts";
+import { geistMono, silkscreen } from "../public/fonts";
 import { BackgroundBeamsWithCollision } from "@/app/components/ui/background-beams-with-collision";
 import { LanguageProvider } from "./assets/languages/LanguagesContext";
 import Footer from "@/app/containers/Footer";
@@ -30,7 +30,9 @@ export default function RootLayout({
           <body className="font-geistMono flex">
             <BackgroundBeamsWithCollision>
               <NavBar />
-              <main className="py-28 flex justify-center text-center">{children}</main>
+              <main className="py-28 flex justify-center text-center">
+                {children}
+              </main>
             </BackgroundBeamsWithCollision>
             <Footer />
             <CharacterCursor />
