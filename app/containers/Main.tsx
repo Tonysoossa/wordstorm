@@ -15,7 +15,7 @@ export default function Main() {
     <section>
       {!isSignedIn && (
         <div className="flex flex-col pt-20">
-          <p className="text-lg">{translations.indexCoo.textPreBtn}</p>
+          <p className="text-lg">{translations.indexNotCoo.textPreBtn}</p>
           <MainBtn />
         </div>
       )}
