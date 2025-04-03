@@ -39,12 +39,11 @@ const eng = {
     userBtn: "",
   },
   indexNotCoo: {
-    helloUser: "Enfin de retour,",
-    logBtn: "Connexion",
+    logBtn: "Log In",
+    textPreBtn: `Please register to your account or sign up if you're a new user ! Or play as a guest but scores couldn't be saved. Have fun !`,
   },
   indexCoo: {
     helloUser: "Enfin de retour,",
-    textPreBtn: `Please register to your account or sign up if you're a new user ! Or play as a guest but scores couldn't be saved.Have fun !`,
     textPreBtnNewUser: `Welcome to the platform! I'm delighted to welcome you.`,
   },
 };

@@ -39,12 +39,11 @@ const fr = {
     userBtn: "",
   },
   indexNotCoo: {
-    helloUser: "Enfin de retour,",
     logBtn: "Connexion",
+    textPreBtn: `Veuillez vous connecter à votre compte ou vous inscrire si vous êtes un nouvel utilisateur ! Ou jouez en tant qu'invité, mais les scores ne seront pas sauvegardés. Amusez-vous bien !`,
   },
   indexCoo: {
     helloUser: "Enfin de retour,",
-    textPreBtn: `Veuillez vous connecter à votre compte ou vous inscrire si vous êtes un nouvel utilisateur ! Ou jouez en tant qu'invité, mais les scores ne seront pas sauvegardés. Amusez-vous bien !`,
     textPreBtnNewUser: `Bienvenue sur la plateforme ! Je suis ravi de t'accueillir.`,
   },
 };
