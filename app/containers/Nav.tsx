@@ -6,6 +6,7 @@ import RulesModal from "../components/modals/RulesModal";
 import CheckAuthNav from "@/app/components/auth/CheckAuthNav";
 import AccountModal from "../components/modals/AccountModal";
 import { SignedIn } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function NavBar() {
   const { translations, toggleLanguage } = useLanguage();
@@ -18,7 +19,9 @@ export default function NavBar() {
           width={40}
           height={40}
         />
-        <p className="text-3xl font-bold cursor-default">Wordstorm</p>
+        <Link href="/">
+          <button className="text-3xl font-bold cursor-pointer">Wordstorm</button>
+        </Link>
         <button
           onClick={toggleLanguage}
           className="flex items-center rounded-lg text-lg pb-1 hover:text-yellowCustom hover:scale-125"
