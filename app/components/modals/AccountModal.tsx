@@ -4,6 +4,7 @@ import { useUser } from "@clerk/nextjs";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../assets/languages/LanguagesContext";
 import { handleServerDelete } from "@/app/api/deleteUser/route";
+import { useScore } from "../../context/ScoreContext";
 
 export default function AccountModal({
   children,
@@ -14,6 +15,7 @@ export default function AccountModal({
   const closeModal = () => setIsOpen(false);
   const { translations } = useLanguage();
   const { user } = useUser();
+  const { lastScore, highScore } = useScore();
 
   const handleClick = async () => {
     try {
@@ -72,8 +74,14 @@ export default function AccountModal({
                       {translations.account.accountModal.mailInfo}{" "}
                       {user.emailAddresses[0].emailAddress}
                     </p>
-                    <p>{translations.account.accountModal.lastScore}</p>
-                    <p>{translations.account.accountModal.highestScore}</p>
+                    <p>
+                      {translations.account.accountModal.lastScore}
+                      {lastScore}
+                    </p>
+                    <p>
+                      {translations.account.accountModal.highestScore}{" "}
+                      {highScore}
+                    </p>
                   </div>
                 </div>
                 <h2 className="pt-4 pb-2">
