@@ -1,3 +1,7 @@
+import MainGame from "../containers/MainGame";
+
 export default function Game() {
-  return <div>THis is game page</div>;
+  return <section>
+    <MainGame/>
+  </section>;
 }
