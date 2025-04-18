@@ -4,13 +4,14 @@ import { useUser } from "@clerk/nextjs";
 import capitalize from "../assets/function/firstLetterUpperCase";
 import { SignedOut } from "@clerk/nextjs";
 import StartGameBtn from "../components/buttons/StartGameBtn";
+import ScoreDisplay from "../components/game/ScoreDisplay";
 
 export default function MainGame() {
   const { isSignedIn, user } = useUser();
   // const { translations } = useLanguage();
 
   return (
-    <div className="flex-col flex justify-center items-center gap-y-12 pt-28">
+    <div className="flex-col flex justify-center items-center gap-y-12 pt-28 text-xl font-bold">
       <SignedOut>
         <p>Alright stranger, Let&apos;s start a game !</p>
       </SignedOut>
@@ -21,6 +22,7 @@ export default function MainGame() {
         </p>
       )}
       <StartGameBtn />
+      <ScoreDisplay />
     </div>
   );
 }
