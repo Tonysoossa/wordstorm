@@ -47,10 +47,8 @@ export default function RulesModal({
               </h2>
               <div className="gap-2 flex flex-col text-gray-800 text-sm font-geistMono">
                 <p>{translations.rulesModal.base}</p>
-                <p>{translations.rulesModal.soloTitle}</p>
-                <p>{translations.rulesModal.soloText}</p>
-                <p>{translations.rulesModal.multiTitle}</p>
-                <p>{translations.rulesModal.multiText}</p>
+                <p>{translations.rulesModal.firstText}</p>
+                <p>{translations.rulesModal.secondeText}</p>
               </div>
             </motion.div>
           </motion.div>

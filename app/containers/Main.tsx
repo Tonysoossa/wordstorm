@@ -12,17 +12,18 @@ export default function Main() {
     Date.now() - new Date(user?.createdAt ?? 0).getTime() < 100000;
 
   return (
-    <section>
+    <section className="pt-14">
       {!isSignedIn && (
-        <div className="flex flex-col pt-20">
+        <div className="flex gap-20 flex-col">
           <p className="text-lg">{translations.indexNotCoo.textPreBtn}</p>
           <MainBtn />
         </div>
       )}
       {isSignedIn && !isNewUser && (
-        <div className="flex-col flex justify-center gap-y-12 text-xl font-bold">
+        <div className="flex gap-20 flex-col text-xl font-bold">
           {translations.indexCoo.helloUser}{" "}
-          {user?.username ? capitalize(user.username) : ""} !
+          {user?.username ? capitalize(user.username) : ""} !{" "}
+          {translations.indexCoo.afterUsername}
           <MainBtn />
         </div>
       )}
