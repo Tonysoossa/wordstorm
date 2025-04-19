@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../../assets/languages/LanguagesContext";
-import { handleServerDelete } from "@/app/actions/deleteUser/route";
+import { handleServerDelete } from "@/app/actions/deleteUser";
 import { useScore } from "../../context/ScoreContext";
 
 export default function AccountModal({
