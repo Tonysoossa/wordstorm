@@ -11,7 +11,7 @@ export default function MainGame() {
   const { translations } = useLanguage();
 
   return (
-    <div className="flex-col flex justify-center items-center gap-y-12 pt-28 text-xl font-bold">
+    <div className="flex-col flex justify-center items-center gap-y-12 pt-12 text-xl font-bold">
       <SignedOut>
         <p>
           {translations.indexNotCoo.preStart} {translations.indexCoo.ready}
@@ -20,7 +20,7 @@ export default function MainGame() {
       {isSignedIn && (
         <p>
           {translations.indexCoo.helloUser}{" "}
-          {user?.username ? capitalize(user.username) : ""}{" "}
+          {user?.username ? capitalize(user.username) : ""},{" "}
           {translations.indexCoo.ready}
         </p>
       )}
