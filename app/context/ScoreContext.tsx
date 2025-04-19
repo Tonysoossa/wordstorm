@@ -1,5 +1,4 @@
 "use client";
-
 import {
   createContext,
   useContext,
@@ -12,7 +11,7 @@ import { useUser } from "@clerk/nextjs";
 interface ScoreContextType {
   lastScore: number;
   highScore: number;
-  updateScores: (newScore: number) => Promise<void>;
+  updateScores: (newScore: number) => void;
 }
 
 const ScoreContext = createContext<ScoreContextType | undefined>(undefined);
@@ -23,54 +22,29 @@ export function ScoreProvider({ children }: { children: ReactNode }) {
   const [highScore, setHighScore] = useState<number>(0);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const storedLastScore = localStorage.getItem("lastScore");
+    if (storedLastScore) {
+      setLastScore(parseInt(storedLastScore, 10));
+    }
+
     if (isSignedIn && user) {
-      fetchUserScores(user.id);
-    } else {
-      const storedLastScore = localStorage.getItem("lastScore");
-      if (storedLastScore) {
-        setLastScore(parseInt(storedLastScore, 10));
+      const storedHighScore = localStorage.getItem(`highScore_${user.id}`);
+      if (storedHighScore) {
+        setHighScore(parseInt(storedHighScore, 10));
       }
     }
   }, [isSignedIn, user]);
 
-  const fetchUserScores = async (userId: string) => {
-    try {
-      const response = await fetch(`/api/scores?userId=${userId}`);
-      if (response.ok) {
-        const data = await response.json();
-        setHighScore(data.highScore || 0);
-        setLastScore(data.lastScore || 0);
-      }
-    } catch (error) {
-      console.error("Erreur lors de la récupération des scores:", error);
-    }
-  };
-
-  const updateScores = async (newScore: number) => {
+  const updateScores = (newScore: number) => {
     setLastScore(newScore);
-
+    localStorage.setItem("lastScore", newScore.toString());
     if (isSignedIn && user) {
-      try {
-        const response = await fetch("/api/scores", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            userId: user.id,
-            newScore,
-          }),
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          setHighScore(data.highScore);
-        }
-      } catch (error) {
-        console.error("Erreur lors de la mise à jour des scores:", error);
+      if (newScore > highScore) {
+        setHighScore(newScore);
+        localStorage.setItem(`highScore_${user.id}`, newScore.toString());
       }
-    } else {
-      localStorage.setItem("lastScore", newScore.toString());
     }
   };
 
