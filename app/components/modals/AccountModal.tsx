@@ -75,7 +75,7 @@ export default function AccountModal({
                       {user.emailAddresses[0].emailAddress}
                     </p>
                     <p>
-                      {translations.account.accountModal.lastScore}
+                      {translations.account.accountModal.lastScore}{" "}
                       {lastScore}
                     </p>
                     <p>
