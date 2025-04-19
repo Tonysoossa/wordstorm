@@ -43,7 +43,7 @@ const eng = {
     ready: "Ready ?",
   },
   indexCoo: {
-    helloUser: "Finally back,",
+    helloUser: "Finally back",
     afterUsername: "Ready to start a new game ?",
     textPreBtnNewUser: `Welcome to the platform! I'm delighted to welcome you.`,
     ready: "Ready ?",

@@ -44,7 +44,7 @@ const fr = {
     ready: "Prêt ?",
   },
   indexCoo: {
-    helloUser: "Enfin de retour,",
+    helloUser: "Enfin de retour",
     afterUsername: "Prêt à lancer une nouvelle partie ?",
     textPreBtnNewUser: `Bienvenue sur la plateforme ! Je suis ravi de t'accueillir.`,
     ready: "Prêt ?",
