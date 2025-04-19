@@ -7,7 +7,7 @@ export default function MainBtn() {
   return (
     <div>
       <SignedOut>
-        <div className="flex justify-center pt-20 gap-16 mx-auto ">
+        <div className="flex justify-center pt-16 gap-16 max-md:gap-10 mx-auto ">
           <Link href="/game">
             <button className="shadow-[0px_3px_5px_1.5px_#fff6af] bg-gradient-to-b from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-lg w-28 hover:scale-110 hover:shadow-[0px_3px_5px_1px_#fff6af] h-10">
               Play !
