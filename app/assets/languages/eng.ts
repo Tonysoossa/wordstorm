@@ -13,8 +13,8 @@ const eng = {
     secondeText: `Train yourself to type as fast as possible and beat your own record if you're logged in! 🏆`,
   },
   aboutModal: {
-    title: " Welcome to WORDSTORM !",
-    text: `Wordstorm is an interactive game designed to enrich your french vocabulary while having fun. It is also a personal and independent project, created with the goal of practicing my knowledge and learning while enjoying myself! If you want to visit my portfolio and/or the Wordstorm repository, here you go!`,
+    title: "Welcome to WORDSTORM!",
+    text: `Wordstorm is an interactive game designed to improve your typing speed while having fun. It's also a personal and independent project, created to practice my skills and learn while enjoying the process! If you'd like to check out my portfolio or the Wordstorm repository, you're in the right place!`,
   },
   account: {
     accountModal: {
