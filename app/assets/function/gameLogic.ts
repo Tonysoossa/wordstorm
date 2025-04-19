@@ -1,6 +1,3 @@
-// utils/gameLogic.ts
-
-// Variable globale pour le score
 let score = 0;
 
 export const fetchNewWord = async (): Promise<string> => {
@@ -28,16 +25,13 @@ export const handleValidation = async (
     return { newWord, newScore: score };
   }
   
-  // Si le mot n'est pas égal, retourner le même mot
   return { newWord: word, newScore: score };
 };
 
-// Réinitialiser le score
 export const resetScore = (): void => {
   score = 0;
 };
 
-// Récupérer le score actuel
 export const getCurrentScore = (): number => {
   return score;
 };
