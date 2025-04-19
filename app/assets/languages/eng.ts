@@ -7,12 +7,10 @@ const eng = {
     deco: "Sign out",
   },
   rulesModal: {
-    title: `Rules :`,
-    base: `Wordstorm is a race against time where each typed word moves you forward! Three game modes: Rush 💣 (30s), Speedy 💨 (60s), and Chill 🍃 (90s).`,
-    soloTitle: `🕹️ Solo Mode :`,
-    soloText: `A word appears on the screen for 2 seconds. Once validated, a new one is generated. Each correctly typed word earns 1 point. Chain 4 correct words in a row to earn a +1 bonus point!`,
-    multiTitle: `🏆 Multiplayer Mode :`,
-    multiText: `Compete against other players, and when time runs out, the player with the highest score wins! 🚀`,
+    title: `Rules:`,
+    base: `🕹️ Wordstorm is a race against time where every word you type moves you forward!`,
+    firstText: `A word appears on the screen, and once it's validated, a new one is generated. Each correctly typed word earns you 1 point.`,
+    secondeText: `Train yourself to type as fast as possible and beat your own record if you're logged in! 🏆`,
   },
   aboutModal: {
     title: " Welcome to WORDSTORM !",
@@ -41,10 +39,19 @@ const eng = {
   indexNotCoo: {
     logBtn: "Log In",
     textPreBtn: `Please register to your account or sign up if you're a new user ! Or play as a guest but scores couldn't be saved. Have fun !`,
+    preStart: "Alright stranger,",
+    ready: "Ready ?",
   },
   indexCoo: {
-    helloUser: "Enfin de retour,",
+    helloUser: "Finally back,",
+    afterUsername: "Ready to start a new game ?",
     textPreBtnNewUser: `Welcome to the platform! I'm delighted to welcome you.`,
+    ready: "Ready ?",
+  },
+  displayScore: {
+    lastScore: "Last score: ",
+    highScore: "Highest score: ",
+    myScores: "My Scores",
   },
 };
 
