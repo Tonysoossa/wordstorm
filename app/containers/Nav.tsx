@@ -38,7 +38,7 @@ export default function NavBar() {
           />
         </button>
       </div>
-      <div className="flex flex-wrap justify-center text-lg gap-x-8 gap-y-4 max-md:text-md">
+      <div className="flex flex-wrap justify-center text-lg gap-x-8 gap-y-4 max-md:text-md max-lg:pt-2">
         <RulesModal>{translations.navBar.rules}</RulesModal>
         <AboutModal> {translations.navBar.about}</AboutModal>
         <CheckAuthNav />
