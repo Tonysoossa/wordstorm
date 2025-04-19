@@ -7,7 +7,7 @@ export default function ScoreDisplay() {
   const { isSignedIn } = useUser();
 
   return (
-    <div className="py-4 bg-white text-black rounded-lg shadow-xl px-10">
+    <div className="py-4 bg-white text-black rounded-lg shadow-xl px-10 z-50">
       <h2 className="text-2xl font-bold mb-4">Mes Scores</h2>
       <p className="">Dernier score: {lastScore}</p>
       {isSignedIn && <p>Meilleur score: {highScore}</p>}
