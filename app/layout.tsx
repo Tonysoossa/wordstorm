@@ -27,9 +27,8 @@ export default function RootLayout({
         className={`${silkscreen.variable} ${geistMono.variable}`}
       >
         <LanguageProvider>
-          <head></head>
-          <body className="font-geistMono flex">
-            <ScoreProvider>
+          <ScoreProvider>
+            <body className="font-geistMono flex">
               <BackgroundBeamsWithCollision>
                 <NavBar />
                 <main className="py-28 flex justify-center text-center">
@@ -38,8 +37,8 @@ export default function RootLayout({
               </BackgroundBeamsWithCollision>
               <Footer />
               <CharacterCursor />
-            </ScoreProvider>
-          </body>
+            </body>
+          </ScoreProvider>
         </LanguageProvider>
       </html>
     </ClerkProvider>
