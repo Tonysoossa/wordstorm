@@ -7,7 +7,7 @@ import { auth } from "@clerk/nextjs/server";
 const prisma = new PrismaClient();
 
 // GET pour récupérer les scores d'un utilisateur
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const { userId } = await auth();
 
@@ -74,6 +74,7 @@ export async function POST(request: NextRequest) {
       const newHighScore = newScore > currentHighScore ? newScore : currentHighScore;
       
       // Mise à jour de l'utilisateur
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       result = await prisma.$executeRaw`
         UPDATE UserScore 
         SET lastScore = ${newScore}, 
