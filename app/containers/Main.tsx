@@ -1,8 +1,8 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import { useLanguage } from "@/app/assets/languages/LanguagesContext";
-import MainBtn from "../components/buttons/MainBtn";
-import capitalize from "../assets/function/firstLetterUpperCase";
+import MainBtn from "@/app/components/buttons/MainBtn";
+import capitalize from "@/app/assets/function/firstLetterUpperCase";
 
 export default function Main() {
   const { isSignedIn, user } = useUser();

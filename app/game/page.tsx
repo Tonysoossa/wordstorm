@@ -1,4 +1,4 @@
-import MainGame from "../containers/MainGame";
+import MainGame from "@/app/containers/MainGame";
 
 export default function Game() {
   return <section>

@@ -1,10 +1,10 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import { useLanguage } from "@/app/assets/languages/LanguagesContext";
-import capitalize from "../assets/function/firstLetterUpperCase";
+import capitalize from "@/app/assets/function/firstLetterUpperCase";
 import { SignedOut } from "@clerk/nextjs";
-import StartGame from "../components/game/StartGame";
-import ScoreDisplay from "../components/game/ScoreDisplay";
+import StartGame from "@/app/components/game/StartGame";
+import ScoreDisplay from "@/app/components/game/ScoreDisplay";
 
 export default function MainGame() {
   const { isSignedIn, user } = useUser();
@@ -13,10 +13,16 @@ export default function MainGame() {
   return (
     <div className="flex-col flex justify-center items-center gap-y-12 pt-28 text-xl font-bold">
       <SignedOut>
-        <p>{translations.indexNotCoo.preStart} {translations.indexCoo.ready}</p>
+        <p>
+          {translations.indexNotCoo.preStart} {translations.indexCoo.ready}
+        </p>
       </SignedOut>
       {isSignedIn && (
-        <p>{translations.indexCoo.helloUser} {user?.username ? capitalize(user.username) : ""} {translations.indexCoo.ready}</p>
+        <p>
+          {translations.indexCoo.helloUser}{" "}
+          {user?.username ? capitalize(user.username) : ""}{" "}
+          {translations.indexCoo.ready}
+        </p>
       )}
       <StartGame />
       <ScoreDisplay />

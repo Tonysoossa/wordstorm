@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useLanguage } from "../assets/languages/LanguagesContext";
+import { useLanguage } from "@/app/assets/languages/LanguagesContext";
 import AboutModal from "@/app/components/modals/AboutModal";
-import RulesModal from "../components/modals/RulesModal";
+import RulesModal from "@/app/components/modals/RulesModal";
 import CheckAuthNav from "@/app/components/auth/CheckAuthNav";
-import AccountModal from "../components/modals/AccountModal";
+import AccountModal from "@/app/components/modals/AccountModal";
 import { SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 
