@@ -12,9 +12,9 @@ export default function Main() {
     Date.now() - new Date(user?.createdAt ?? 0).getTime() < 100000;
 
   return (
-    <section className="pt-14 mx-4">
+    <section className="pt-6 mx-4">
       {!isSignedIn && (
-        <div className="flex gap-20 flex-col">
+        <div className="flex gap-0 flex-col">
           <p className="text-lg">{translations.indexNotCoo.textPreBtn}</p>
           <MainBtn />
         </div>
