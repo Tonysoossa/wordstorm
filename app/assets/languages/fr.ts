@@ -12,10 +12,9 @@ const fr = {
     firstText: `Un mot apparaît à l’écran, puis une fois validé, un nouveau est généré. Chaque mot correctement tapé rapporte 1 point.`,
     secondeText: `Entraîne-toi à taper le plus vite possible et bats ton propre record si tu es connecté ! 🏆`,
   },
-
   aboutModal: {
     title: " Bienvenue sur WORDSTOM !",
-    text: `Wordstorm est un jeu interactif conçu pour enrichir votre vocabulaire tout en vous amusant. C'est également un projet personnel et indépendant, créé dans le but de pratiquer mes connaissances et d'apprendre en m'amusant ! Si vous souhaitez visiter mon portfolio et/ou le repo de Wordstorm, c'est par ici !`,
+    text: `Wordstorm est un jeu interactif conçu pour enrichir votre vocabulaire francais tout en vous amusant. C'est également un projet personnel et indépendant, créé dans le but de pratiquer mes connaissances et d'apprendre en m'amusant ! Si vous souhaitez visiter mon portfolio et/ou le repo de Wordstorm, c'est par ici !`,
   },
   account: {
     accountModal: {

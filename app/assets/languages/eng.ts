@@ -14,7 +14,7 @@ const eng = {
   },
   aboutModal: {
     title: " Welcome to WORDSTORM !",
-    text: `Wordstorm is an interactive game designed to enrich your vocabulary while having fun. It is also a personal and independent project, created with the goal of practicing my knowledge and learning while enjoying myself! If you want to visit my portfolio and/or the Wordstorm repository, here you go!`,
+    text: `Wordstorm is an interactive game designed to enrich your french vocabulary while having fun. It is also a personal and independent project, created with the goal of practicing my knowledge and learning while enjoying myself! If you want to visit my portfolio and/or the Wordstorm repository, here you go!`,
   },
   account: {
     accountModal: {
