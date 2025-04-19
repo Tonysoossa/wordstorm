@@ -20,7 +20,9 @@ export default function NavBar() {
           height={40}
         />
         <Link href="/">
-          <button className="text-3xl font-bold cursor-pointer">Wordstorm</button>
+          <button className="text-3xl font-bold cursor-pointer">
+            Wordstorm
+          </button>
         </Link>
         <button
           onClick={toggleLanguage}
@@ -36,7 +38,7 @@ export default function NavBar() {
           />
         </button>
       </div>
-      <div className="flex text-lg gap-8 max-md:text-md">
+      <div className="flex text-lg gap-8 max-md:text-md max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-4 max-lg:gap-y-2 max-lg:pt-4">
         <RulesModal>{translations.navBar.rules}</RulesModal>
         <AboutModal> {translations.navBar.about}</AboutModal>
         <CheckAuthNav />
