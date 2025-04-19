@@ -20,19 +20,20 @@ export default function Main() {
         </div>
       )}
       {isSignedIn && !isNewUser && (
-        <div className="flex-col flex justify-center gap-y-12">
+        <div className="flex-col flex justify-center gap-y-12 text-xl font-bold">
           {translations.indexCoo.helloUser}{" "}
           {user?.username ? capitalize(user.username) : ""} !
           <MainBtn />
         </div>
       )}
       {isNewUser && user && (
-        <div className="flex-col flex justify-center gap-y-12">
+        <div className="flex-col flex justify-center gap-y-12 text-xl font-bold">
           {translations.indexCoo.textPreBtnNewUser}{" "}
           {user?.username ? capitalize(user.username) : ""}
           <MainBtn />
         </div>
       )}
+      
     </section>
   );
 }
