@@ -22,7 +22,6 @@ export default function MainBtn() {
       </SignedOut>
       <SignedIn>
         <div>
-          <p className="pb-12">Maintenant connecter, il est temps de jouer !</p>
           <Link href="/game">
             <button className="shadow-[0px_3px_5px_1.5px_#fff6af] bg-gradient-to-b from-[#ffed64] to-[#ffab23] rounded-3xl cursor-pointer text-black font-silkscreen text-lg w-28 hover:scale-110 hover:shadow-[0px_3px_5px_1px_#fff6af] h-10 font-normal">
               Play !
