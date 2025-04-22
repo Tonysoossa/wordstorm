@@ -57,6 +57,7 @@ export default function StartGame() {
   const endGame = async () => {
     setIsPlaying(false);
     setGameEnded(true);
+    setInput("");
     await updateScores(score);
   };
 
@@ -131,7 +132,9 @@ export default function StartGame() {
                 value={input}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
-                className={`border-2 text-black border-black rounded px-4 py-2 ${shake ? "shake" : ""}`}
+                className={`border-2 text-black border-black rounded px-4 py-2 ${
+                  shake ? "shake" : ""
+                }`}
                 placeholder="Tape le mot"
                 autoFocus
               />{" "}
