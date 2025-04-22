@@ -1,4 +1,3 @@
-// app/api/scores/route.ts (avec import explicite)
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 import { auth } from "@clerk/nextjs/server";
