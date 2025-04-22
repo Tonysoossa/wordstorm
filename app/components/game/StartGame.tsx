@@ -62,12 +62,12 @@ export default function StartGame() {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(capitalize(e.target.value));
+    setInput(e.target.value);
   };
 
   const handleKeyDown = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      if (input.trim() === word.trim()) {
+      if (input.trim().toLowerCase() === word.trim().toLowerCase()) {
         const { newWord, newScore } = await handleValidation(input, word);
         setWord(capitalize(newWord));
         setScore(newScore);
