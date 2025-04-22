@@ -33,9 +33,6 @@ const eng = {
       deleteConfirmation: "Are you sure about deleting this account ?",
     },
   },
-  buttons: {
-    userBtn: "",
-  },
   indexNotCoo: {
     logBtn: "Log In",
     textPreBtn: `Please register to your account or sign up if you're a new user ! Or play as a guest but scores couldn't be saved. Have fun !`,

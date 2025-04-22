@@ -33,9 +33,6 @@ const fr = {
       deleteConfirmation: "Es-tu sûr de vouloir supprimer ce compte ?",
     },
   },
-  buttons: {
-    userBtn: "",
-  },
   indexNotCoo: {
     logBtn: "Connexion",
     textPreBtn: `Veuillez vous connecter à votre compte ou vous inscrire si vous êtes un nouvel utilisateur ! Ou jouez en tant qu'invité, mais les scores ne seront pas sauvegardés. Amusez-vous bien !`,
